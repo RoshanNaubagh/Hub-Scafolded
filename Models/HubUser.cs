@@ -1,4 +1,9 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Hub.Models.Advertisement;
+using Hub.Models.Event;
+using Hub.Models.Extra;
+using Hub.Models.Organization;
+using Hub.Models.OrganizationFeature;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -39,18 +44,18 @@ namespace Hub.Models
 
 
 
-        //public ICollection<WatchList> WatchList { get; set; }
+        public ICollection<WatchList> WatchList { get; set; }
 
 
-        //public ICollection<Adv> Advs { get; set; }
+        public ICollection<Adv> Advs { get; set; }
 
-        //public ICollection<UserDetail> UserDetails { get; set; }
-        //public ICollection<Rating> Ratings { get; set; }
+        public ICollection<UserDetail> UserDetails { get; set; }
+        public ICollection<Rating> Ratings { get; set; }
 
-        //public ICollection<Comment> Comments { get; set; }
+        public ICollection<Comment> Comments { get; set; }
 
-        //public ICollection<CommentReply> CommentReplies { get; set; }
+        public ICollection<CommentReply> CommentReplies { get; set; }
 
-        //public ICollection<EventApplyForm> EventApplyForm { get; set; }
+        public ICollection<EventApplyForm> EventApplyForm { get; set; }
     }
 }

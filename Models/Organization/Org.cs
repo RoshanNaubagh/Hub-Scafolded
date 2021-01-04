@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Hub.Controllers.Info;
+using Hub.Models.Event;
+using Hub.Models.OrganizationFeature;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -88,16 +92,16 @@ namespace Hub.Models.Organization
 
         public DateTime OrgCreatedDate { get; set; } = DateTime.UtcNow;  // To get current date and time when organization was registed in our system
 
-      //  public ICollection<OrgImage> OrgImages { get; set; }
+       // public ICollection<OrgImage> OrgImages { get; set; }
 
-        //public ICollection<EventRego> EventRegos { get; set; }  //Added by sumesh need to check - checked by roshan and surace
+        public ICollection<EventRego> EventRegos { get; set; }  //Added by sumesh need to check - checked by roshan and surace
 
-        //public ICollection<NewsRegister> NewsRegisters { get; set; } //one Org can post multiple newsregister
+        public ICollection<NewsRegister> NewsRegisters { get; set; } //one Org can post multiple newsregister
 
-        ////public  ICollection<Annual> Annuals { get; set; } this secontion is removed by discussing with roshan and surace  //one user will have Annual fee each year ?? so isi it one to many or one to one 
+        //public  ICollection<Annual> Annuals { get; set; } this secontion is removed by discussing with roshan and surace  //one user will have Annual fee each year ?? so isi it one to many or one to one 
 
-        //public ICollection<Facility> Facilities { get; set; }  // one organization will have multiple facilities 
+        public ICollection<Facility> Facilities { get; set; }  // one organization will have multiple facilities 
 
-        //public ICollection<Fee> Fees { get; set; } //one organization will have their multiple internal fees like transportation feee ,hostel fee 
+        public ICollection<Fee> Fees { get; set; } //one organization will have their multiple internal fees like transportation feee ,hostel fee 
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hub.Models.Advertisement;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -17,6 +18,6 @@ namespace Hub.Models.Organization
         public ICollection<ModuleCategory> ModuleCategories { get; set; }  //one module will have multiple module category 
 
 
-       // public ICollection<OrgFee> OrgFees { get; set; }  // one module will have multiple orgfee type 
+        public ICollection<OrgFee> OrgFees { get; set; }  // one module will have multiple orgfee type 
     }
 }
